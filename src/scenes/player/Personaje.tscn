@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://httovaliqqan"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_if6j7"]
+
+[node name="Personaje" type="Node2D" unique_id=720140517]
+material = SubResource("CanvasItemMaterial_if6j7")
+use_parent_material = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1141354142]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=778465331]
