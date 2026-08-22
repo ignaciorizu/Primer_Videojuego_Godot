@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://db72vg4vlmqqe"]
+
+[ext_resource type="Script" uid="uid://b4jhp1su5a6mw" path="res://src/scenes/kill_Zone/kill_zone.gd" id="1_p3w3i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_if6j7"]
+
+[node name="Killzone" type="Area2D" unique_id=1798966041]
+script = ExtResource("1_p3w3i")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=594776966]
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+color = Color(0, 0.5009661, 0.24747461, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1586505984]
+shape = SubResource("RectangleShape2D_if6j7")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_shape_entered" from="." to="." method="_on_body_shape_entered"]

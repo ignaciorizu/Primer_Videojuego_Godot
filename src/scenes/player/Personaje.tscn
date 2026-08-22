@@ -8,7 +8,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lj2ea"]
 size = Vector2(143, 143)
 
-[node name="Personaje" type="CharacterBody2D" unique_id=664453637]
+[node name="Personaje" type="CharacterBody2D" unique_id=664453637 groups=["jugador"]]
 material = SubResource("CanvasItemMaterial_if6j7")
 use_parent_material = true
 script = ExtResource("1_ylnn3")
@@ -16,7 +16,7 @@ script = ExtResource("1_ylnn3")
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1141354142]
 texture = ExtResource("1_0gkd8")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=778465331]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=778465331 groups=["jugador"]]
 shape = SubResource("RectangleShape2D_lj2ea")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=976032237]

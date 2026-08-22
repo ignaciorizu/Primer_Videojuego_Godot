@@ -3,11 +3,12 @@
 [ext_resource type="PackedScene" uid="uid://httovaliqqan" path="res://src/scenes/player/Personaje.tscn" id="1_m76yy"]
 [ext_resource type="PackedScene" uid="uid://cwxq2l7pheehq" path="res://src/scenes/piso/piso.tscn" id="2_q3of6"]
 [ext_resource type="PackedScene" uid="uid://bexba03ye7lue" path="res://src/scenes/winZone/winZone.tscn" id="3_cacf4"]
+[ext_resource type="PackedScene" uid="uid://db72vg4vlmqqe" path="res://src/scenes/kill_Zone/kill_zone.tscn" id="4_kccwn"]
 
 [node name="World" type="Node2D" unique_id=869871594]
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=983555015]
-offset_right = 1172.0
+offset_right = 2655.0
 offset_bottom = 691.0
 
 [node name="Personaje" parent="." unique_id=664453637 instance=ExtResource("1_m76yy")]
@@ -24,5 +25,20 @@ position = Vector2(924, 537)
 [node name="Piso4" parent="." unique_id=1616563267 instance=ExtResource("2_q3of6")]
 position = Vector2(693, 403)
 
+[node name="Piso5" parent="." unique_id=334602044 instance=ExtResource("2_q3of6")]
+position = Vector2(1409, 481)
+
+[node name="Piso6" parent="." unique_id=800230437 instance=ExtResource("2_q3of6")]
+position = Vector2(1894, 425)
+
+[node name="Piso7" parent="." unique_id=665216934 instance=ExtResource("2_q3of6")]
+position = Vector2(1417, 303)
+
+[node name="Piso8" parent="." unique_id=165363320 instance=ExtResource("2_q3of6")]
+position = Vector2(1002, 85)
+
 [node name="WinZone" parent="." unique_id=2070348039 instance=ExtResource("3_cacf4")]
 position = Vector2(1082, 413)
+
+[node name="Killzone" parent="." unique_id=1798966041 instance=ExtResource("4_kccwn")]
+position = Vector2(382, 71)
