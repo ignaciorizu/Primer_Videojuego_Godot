@@ -5,7 +5,7 @@
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_m76yy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_if6j7"]
-size = Vector2(433, 87)
+size = Vector2(476.5, 87)
 
 [node name="World" type="Node2D" unique_id=869871594]
 
@@ -15,5 +15,19 @@ size = Vector2(433, 87)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="piso" unique_id=1765518014]
 material = SubResource("CanvasItemMaterial_m76yy")
-position = Vector2(66, 217)
+position = Vector2(232, 205)
+shape = SubResource("RectangleShape2D_if6j7")
+
+[node name="piso2" type="StaticBody2D" parent="." unique_id=1234685138]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="piso2" unique_id=1654666323]
+material = SubResource("CanvasItemMaterial_m76yy")
+position = Vector2(899, 238)
+shape = SubResource("RectangleShape2D_if6j7")
+
+[node name="piso3" type="StaticBody2D" parent="." unique_id=625969042]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="piso3" unique_id=1165092288]
+material = SubResource("CanvasItemMaterial_m76yy")
+position = Vector2(458, 337)
 shape = SubResource("RectangleShape2D_if6j7")
