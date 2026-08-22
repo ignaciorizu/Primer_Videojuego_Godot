@@ -9,6 +9,10 @@ size = Vector2(476.5, 87)
 
 [node name="World" type="Node2D" unique_id=869871594]
 
+[node name="ColorRect" type="ColorRect" parent="." unique_id=983555015]
+offset_right = 1172.0
+offset_bottom = 425.0
+
 [node name="Personaje" parent="." unique_id=664453637 instance=ExtResource("1_m76yy")]
 
 [node name="piso" type="StaticBody2D" parent="." unique_id=1103514999]
