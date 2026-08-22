@@ -1,37 +1,24 @@
 [gd_scene format=3 uid="uid://kdapntfk0jce"]
 
 [ext_resource type="PackedScene" uid="uid://httovaliqqan" path="res://src/scenes/player/Personaje.tscn" id="1_m76yy"]
-
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_m76yy"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_if6j7"]
-size = Vector2(476.5, 87)
+[ext_resource type="PackedScene" uid="uid://cwxq2l7pheehq" path="res://src/scenes/piso/piso.tscn" id="2_q3of6"]
 
 [node name="World" type="Node2D" unique_id=869871594]
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=983555015]
 offset_right = 1172.0
-offset_bottom = 425.0
+offset_bottom = 691.0
 
 [node name="Personaje" parent="." unique_id=664453637 instance=ExtResource("1_m76yy")]
 
-[node name="piso" type="StaticBody2D" parent="." unique_id=1103514999]
+[node name="Piso" parent="." unique_id=1415212472 instance=ExtResource("2_q3of6")]
+position = Vector2(231, 135)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="piso" unique_id=1765518014]
-material = SubResource("CanvasItemMaterial_m76yy")
-position = Vector2(232, 205)
-shape = SubResource("RectangleShape2D_if6j7")
+[node name="Piso2" parent="." unique_id=1035774501 instance=ExtResource("2_q3of6")]
+position = Vector2(462, 269)
 
-[node name="piso2" type="StaticBody2D" parent="." unique_id=1234685138]
+[node name="Piso3" parent="." unique_id=2040790120 instance=ExtResource("2_q3of6")]
+position = Vector2(924, 537)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="piso2" unique_id=1654666323]
-material = SubResource("CanvasItemMaterial_m76yy")
-position = Vector2(899, 238)
-shape = SubResource("RectangleShape2D_if6j7")
-
-[node name="piso3" type="StaticBody2D" parent="." unique_id=625969042]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="piso3" unique_id=1165092288]
-material = SubResource("CanvasItemMaterial_m76yy")
-position = Vector2(458, 337)
-shape = SubResource("RectangleShape2D_if6j7")
+[node name="Piso4" parent="." unique_id=1616563267 instance=ExtResource("2_q3of6")]
+position = Vector2(693, 403)
