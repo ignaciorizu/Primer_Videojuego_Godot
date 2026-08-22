@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://httovaliqqan" path="res://src/scenes/player/Personaje.tscn" id="1_m76yy"]
 [ext_resource type="PackedScene" uid="uid://cwxq2l7pheehq" path="res://src/scenes/piso/piso.tscn" id="2_q3of6"]
+[ext_resource type="PackedScene" uid="uid://bexba03ye7lue" path="res://src/scenes/winZone/winZone.tscn" id="3_cacf4"]
 
 [node name="World" type="Node2D" unique_id=869871594]
 
@@ -22,3 +23,6 @@ position = Vector2(924, 537)
 
 [node name="Piso4" parent="." unique_id=1616563267 instance=ExtResource("2_q3of6")]
 position = Vector2(693, 403)
+
+[node name="WinZone" parent="." unique_id=2070348039 instance=ExtResource("3_cacf4")]
+position = Vector2(1082, 413)
