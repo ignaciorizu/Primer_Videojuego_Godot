@@ -2,6 +2,18 @@
 
 [ext_resource type="PackedScene" uid="uid://httovaliqqan" path="res://src/scenes/player/Personaje.tscn" id="1_m76yy"]
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_m76yy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_if6j7"]
+size = Vector2(433, 87)
+
 [node name="World" type="Node2D" unique_id=869871594]
 
 [node name="Personaje" parent="." unique_id=664453637 instance=ExtResource("1_m76yy")]
+
+[node name="piso" type="StaticBody2D" parent="." unique_id=1103514999]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="piso" unique_id=1765518014]
+material = SubResource("CanvasItemMaterial_m76yy")
+position = Vector2(66, 217)
+shape = SubResource("RectangleShape2D_if6j7")
