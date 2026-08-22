@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://kdapntfk0jce"]
+
+[ext_resource type="PackedScene" uid="uid://httovaliqqan" path="res://src/scenes/player/Personaje.tscn" id="1_m76yy"]
+
+[node name="World" type="Node2D" unique_id=869871594]
+
+[node name="Personaje" parent="." unique_id=664453637 instance=ExtResource("1_m76yy")]
