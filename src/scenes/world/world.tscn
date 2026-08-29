@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bexba03ye7lue" path="res://src/scenes/winZone/winZone.tscn" id="3_cacf4"]
 [ext_resource type="PackedScene" uid="uid://db72vg4vlmqqe" path="res://src/scenes/kill_Zone/kill_zone.tscn" id="4_kccwn"]
 [ext_resource type="PackedScene" uid="uid://bb72ejoj72opb" path="res://src/scenes/pisos/pisoLargo.tscn" id="5_nv6pj"]
+[ext_resource type="PackedScene" uid="uid://ndpl77dn243x" path="res://src/scenes/pisos/LimiteEscenario.tscn" id="6_iaymg"]
 
 [node name="World" type="Node2D" unique_id=869871594]
 
@@ -51,3 +52,19 @@ position = Vector2(565, 615)
 
 [node name="PisoLargo" parent="PisoLargo" unique_id=424267452 instance=ExtResource("5_nv6pj")]
 position = Vector2(-344, -30)
+
+[node name="LimiteEscenario" parent="." unique_id=485679348 instance=ExtResource("6_iaymg")]
+position = Vector2(0, 350)
+scale = Vector2(0.5, 31)
+
+[node name="LimiteEscenario2" parent="." unique_id=400532105 instance=ExtResource("6_iaymg")]
+position = Vector2(2124, 351.00003)
+scale = Vector2(0.5, 30)
+
+[node name="LimiteEscenario3" parent="." unique_id=298415314 instance=ExtResource("6_iaymg")]
+position = Vector2(1284, -105)
+scale = Vector2(100, 0.5)
+
+[node name="LimiteEscenario4" parent="." unique_id=219839081 instance=ExtResource("6_iaymg")]
+position = Vector2(1174, 706)
+scale = Vector2(100, 0.5)
