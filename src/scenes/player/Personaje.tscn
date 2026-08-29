@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cb2djvtfmuod3" path="res://icon.svg" id="1_0gkd8"]
 [ext_resource type="Script" uid="uid://dpno213kdbbfq" path="res://src/scenes/player/personaje.gd" id="1_ylnn3"]
+[ext_resource type="Script" uid="uid://cqwl8lacjep1v" path="res://src/scenes/player/camera_2d.gd" id="3_klvi3"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_if6j7"]
 
@@ -20,3 +21,4 @@ texture = ExtResource("1_0gkd8")
 shape = SubResource("RectangleShape2D_lj2ea")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=976032237]
+script = ExtResource("3_klvi3")
