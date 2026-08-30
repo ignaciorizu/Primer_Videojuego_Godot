@@ -9,7 +9,7 @@
 load_path = "res://.godot/imported/gatoCaminando.png-e1f84b4d2ab97f800650621ad739a166.ctex"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lj2ea"]
-size = Vector2(143, 143)
+size = Vector2(120, 106)
 
 [sub_resource type="Animation" id="Animation_ylnn3"]
 length = 0.001
@@ -63,6 +63,7 @@ vframes = 2
 frame = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=778465331 groups=["jugador"]]
+position = Vector2(3, -9)
 shape = SubResource("RectangleShape2D_lj2ea")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=976032237]
