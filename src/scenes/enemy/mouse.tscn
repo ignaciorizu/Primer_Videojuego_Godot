@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://bjt0pif48378j"]
+
+[ext_resource type="Texture2D" uid="uid://cbhw5as1mtpm4" path="res://src/assets/mouse 1.png" id="1_mh7qk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_157bq"]
+size = Vector2(99, 44)
+
+[node name="Mouse" type="CharacterBody2D" unique_id=140231355]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1012584961]
+texture = ExtResource("1_mh7qk")
+hframes = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=779561835]
+position = Vector2(6.5, 13)
+shape = SubResource("RectangleShape2D_157bq")
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=869343081]
+
+[node name="WallSensor" type="RayCast2D" parent="Marker2D" unique_id=1326180462]
+target_position = Vector2(-72, 0)
+
+[node name="FloorSensor" type="RayCast2D" parent="Marker2D" unique_id=256901092]
+target_position = Vector2(-66, 44)

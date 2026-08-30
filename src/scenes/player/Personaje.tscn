@@ -1,13 +1,15 @@
 [gd_scene format=3 uid="uid://httovaliqqan"]
 
 [ext_resource type="Script" uid="uid://dpno213kdbbfq" path="res://src/scenes/player/personaje.gd" id="1_ylnn3"]
-[ext_resource type="Texture2D" uid="uid://cmqp56hewruu0" path="res://src/assets/gatoSalto.png" id="2_klvi3"]
 [ext_resource type="Script" uid="uid://cqwl8lacjep1v" path="res://src/scenes/player/camera_2d.gd" id="3_klvi3"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_if6j7"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ylnn3"]
 load_path = "res://.godot/imported/gatoCaminando.png-e1f84b4d2ab97f800650621ad739a166.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_klvi3"]
+load_path = "res://.godot/imported/gatoSalto.png-e6c5da2c5561dd1eb718bd953c9f1278.ctex"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lj2ea"]
 size = Vector2(120, 106)
@@ -67,7 +69,8 @@ frame = 2
 visible = false
 position = Vector2(1.4999976, -9.5)
 scale = Vector2(2.109375, 2.2031252)
-texture = ExtResource("2_klvi3")
+texture = SubResource("CompressedTexture2D_klvi3")
+flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=778465331 groups=["jugador"]]
 position = Vector2(3, -9)
