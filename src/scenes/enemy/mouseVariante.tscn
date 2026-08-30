@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://n1og1xdw2xuc"]
+
+[ext_resource type="Script" uid="uid://chb5qiqorhk2q" path="res://src/scenes/enemy/mouse.gd" id="1_b7gh5"]
+[ext_resource type="Texture2D" uid="uid://bpufaxq6awk5n" path="res://src/assets/mouse 2.png" id="1_s4vrh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_157bq"]
+size = Vector2(99, 44)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_if6j7"]
+size = Vector2(106, 60)
+
+[sub_resource type="Animation" id="Animation_mh7qk"]
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_157bq"]
+resource_name = "walk"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nryv8"]
+_data = {
+&"RESET": SubResource("Animation_mh7qk"),
+&"walk": SubResource("Animation_157bq")
+}
+
+[node name="MouseVariante" type="CharacterBody2D" unique_id=140231355]
+collision_layer = 4
+script = ExtResource("1_b7gh5")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1012584961]
+texture = ExtResource("1_s4vrh")
+hframes = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=779561835]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_157bq")
+
+[node name="SensorPivot" type="Marker2D" parent="." unique_id=869343081]
+
+[node name="WallSensor" type="RayCast2D" parent="SensorPivot" unique_id=1326180462]
+target_position = Vector2(-72, 0)
+
+[node name="FloorSensor" type="RayCast2D" parent="SensorPivot" unique_id=256901092]
+target_position = Vector2(-66, 44)
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=194305092]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=906286544]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_if6j7")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1375459981]
+libraries/ = SubResource("AnimationLibrary_nryv8")

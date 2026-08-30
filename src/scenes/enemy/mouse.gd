@@ -45,10 +45,7 @@ func _invert_direction() -> void:
 	_current_direction *= -1.0
 	_sprite.flip_h = _current_direction > 0.0
 	_sensor_pivot.scale.x = -_current_direction
-
-func _ignore_action() -> void:
-	pass
-
+	
 func _apply_movement() -> void:
 	velocity.x = _current_direction * PATROL_SPEED
 
@@ -64,5 +61,18 @@ func _process_hitbox_collision(body: Node2D) -> void:
 	action.call_deferred()
 
 func _execute_damage_sequence() -> void:
+	var tree_state_map: Dictionary = {
+		true: _apply_damage_and_reload,
+		false: _ignore_action
+	}
+	
+	var is_valid_tree: bool = is_inside_tree()
+	var action: Callable = tree_state_map[is_valid_tree]
+	action.call()
+
+func _apply_damage_and_reload() -> void:
 	world.subtract_life()
 	get_tree().reload_current_scene()
+
+func _ignore_action() -> void:
+	pass

@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://ccbpalwlsx23a" path="res://src/scenes/player/vidas.tscn" id="9_iwh12"]
 [ext_resource type="PackedScene" uid="uid://bjt0pif48378j" path="res://src/scenes/enemy/mouse.tscn" id="10_hrb3u"]
 [ext_resource type="Script" uid="uid://chb5qiqorhk2q" path="res://src/scenes/enemy/mouse.gd" id="11_4fx67"]
+[ext_resource type="PackedScene" uid="uid://n1og1xdw2xuc" path="res://src/scenes/enemy/mouseVariante.tscn" id="12_qfn71"]
 
 [node name="World" type="Node2D" unique_id=869871594]
 script = ExtResource("1_m1gqc")
@@ -83,3 +84,10 @@ position = Vector2(571, 281)
 [node name="Mouse" parent="." unique_id=140231355 instance=ExtResource("10_hrb3u")]
 position = Vector2(557, 562)
 script = ExtResource("11_4fx67")
+
+[node name="Mouse2" parent="." unique_id=1903183908 instance=ExtResource("10_hrb3u")]
+position = Vector2(282, 516)
+script = ExtResource("11_4fx67")
+
+[node name="Mouse3" parent="." unique_id=296037076 instance=ExtResource("12_qfn71")]
+position = Vector2(140, 542)
