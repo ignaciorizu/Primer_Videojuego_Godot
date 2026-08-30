@@ -2,17 +2,20 @@ extends CharacterBody2D
 
 const PATROL_SPEED: float = 100.0
 const DIRECTION_LEFT: float = -1.0
+const ANIMATION_WALK: String = "walk"
 
 @onready var _sprite: Sprite2D = $Sprite2D
 @onready var _sensor_pivot: Marker2D = $SensorPivot
 @onready var _wall_sensor: RayCast2D = $SensorPivot/WallSensor
 @onready var _floor_sensor: RayCast2D = $SensorPivot/FloorSensor
 @onready var _hitbox: Area2D = $Hitbox
+@onready var _animation_player: AnimationPlayer = $AnimationPlayer
 
 var _current_direction: float = DIRECTION_LEFT
 
 func _ready() -> void:
 	_hitbox.body_entered.connect(_process_hitbox_collision)
+	_animation_player.play(ANIMATION_WALK)
 
 func _physics_process(delta: float) -> void:
 	_apply_gravity(delta)
