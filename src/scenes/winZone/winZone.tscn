@@ -5,6 +5,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_if6j7"]
 
 [node name="WinZone" type="Area2D" unique_id=2070348039]
+collision_mask = 2
 script = ExtResource("1_ghq1c")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1588410738]

@@ -5,6 +5,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5vsdl"]
 
 [node name="CheckPoint" type="Area2D" unique_id=1597545599]
+collision_mask = 2
 script = ExtResource("1_hrfqe")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1010708914]
