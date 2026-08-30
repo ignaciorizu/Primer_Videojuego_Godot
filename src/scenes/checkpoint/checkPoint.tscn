@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dp8n3vic3pp0c"]
+
+[ext_resource type="Script" uid="uid://0ifxby4u83bu" path="res://src/scenes/checkpoint/check_point.gd" id="1_hrfqe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5vsdl"]
+
+[node name="CheckPoint" type="Area2D" unique_id=1597545599]
+script = ExtResource("1_hrfqe")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1010708914]
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+color = Color(0.638804, 0.17798674, 0.5694391, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1038702603]
+shape = SubResource("RectangleShape2D_5vsdl")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

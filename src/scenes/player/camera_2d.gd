@@ -18,7 +18,3 @@ func apply_camera_boundaries() -> void:
 	limit_right = BOUNDARY_RIGHT
 	limit_top = BOUNDARY_TOP
 	limit_bottom = BOUNDARY_BOTTOM
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass

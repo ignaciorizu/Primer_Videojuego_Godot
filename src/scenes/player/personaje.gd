@@ -1,9 +1,16 @@
 extends CharacterBody2D
 
-
 const SPEED = 300.0
 const JUMP_VELOCITY = -500.0
 
+func _ready() -> void:
+	_initialize_spawn_position()
+
+func _initialize_spawn_position() -> void:
+	var respawn_pos: Vector2 = world.get_respawn_position()
+	
+	if respawn_pos != Vector2.ZERO:
+		global_position = respawn_pos
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
