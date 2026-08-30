@@ -22,6 +22,11 @@ func get_respawn_position() -> Vector2:
 		push_warning("Advertencia: No hay checkpoint registrado. Retornando origen.")
 		
 	return current_checkpoint_position
+
+func restore_life() -> void:
+	if current_lives < MAX_LIVES:
+		current_lives += 1
+		lives_changed.emit(current_lives)
 	
 func subtract_life() -> void:
 	current_lives -= 1

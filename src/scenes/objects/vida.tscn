@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://m5ds405y026o"]
+
+[ext_resource type="Texture2D" uid="uid://blhwxhgtq1xck" path="res://src/assets/vidas.png" id="1_s2sp2"]
+[ext_resource type="Script" uid="uid://dm8sas0g2omwu" path="res://src/scenes/objects/vida.gd" id="1_yxrn2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_if6j7"]
+size = Vector2(98, 79)
+
+[node name="Vida" type="Area2D" unique_id=978598607]
+collision_mask = 2
+script = ExtResource("1_yxrn2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1959690085]
+position = Vector2(0, 2.5)
+shape = SubResource("RectangleShape2D_if6j7")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1896195676]
+texture = ExtResource("1_s2sp2")
