@@ -6,7 +6,8 @@ func _ready() -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("jugador"):
-		call_deferred("_handle_player_death")
+		call_deferred("_process_player_damage")
 
-func _handle_player_death() -> void:
+func _process_player_damage() -> void:
+	world.subtract_life()
 	get_tree().reload_current_scene()

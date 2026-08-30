@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://ccbpalwlsx23a"]
 
+[ext_resource type="Script" uid="uid://e5tes5wcwsnm" path="res://src/scenes/player/hub_vidas.gd" id="1_e73rx"]
 [ext_resource type="Texture2D" uid="uid://cb2djvtfmuod3" path="res://icon.svg" id="1_sii6y"]
 
 [node name="Vidas" type="CanvasLayer" unique_id=2103879004]
+script = ExtResource("1_e73rx")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1191275963]
 anchors_preset = 1
@@ -14,7 +16,7 @@ offset_bottom = 128.0
 grow_horizontal = 0
 scale = Vector2(0.40206325, 0.40206325)
 
-[node name="TextureRect" type="TextureRect" parent="HBoxContainer" unique_id=1893885554]
+[node name="TextureRect3" type="TextureRect" parent="HBoxContainer" unique_id=1893885554]
 layout_mode = 2
 texture = ExtResource("1_sii6y")
 
@@ -22,6 +24,6 @@ texture = ExtResource("1_sii6y")
 layout_mode = 2
 texture = ExtResource("1_sii6y")
 
-[node name="TextureRect3" type="TextureRect" parent="HBoxContainer" unique_id=1810221327]
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer" unique_id=1810221327]
 layout_mode = 2
 texture = ExtResource("1_sii6y")
