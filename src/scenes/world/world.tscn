@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bb72ejoj72opb" path="res://src/scenes/pisos/pisoLargo.tscn" id="5_nv6pj"]
 [ext_resource type="PackedScene" uid="uid://ndpl77dn243x" path="res://src/scenes/pisos/LimiteEscenario.tscn" id="6_iaymg"]
 [ext_resource type="PackedScene" uid="uid://dp8n3vic3pp0c" path="res://src/scenes/checkpoint/checkPoint.tscn" id="8_gd3mq"]
+[ext_resource type="PackedScene" uid="uid://ccbpalwlsx23a" path="res://src/scenes/player/vidas.tscn" id="9_iwh12"]
 
 [node name="World" type="Node2D" unique_id=869871594]
 script = ExtResource("1_m1gqc")
@@ -17,8 +18,10 @@ offset_top = -1.0
 offset_right = 2655.0
 offset_bottom = 690.0
 
+[node name="Vidas" parent="." unique_id=2103879004 instance=ExtResource("9_iwh12")]
+
 [node name="Personaje" parent="." unique_id=664453637 instance=ExtResource("1_m76yy")]
-position = Vector2(154, 35)
+position = Vector2(154, 34)
 
 [node name="Piso" parent="." unique_id=1415212472 instance=ExtResource("2_q3of6")]
 position = Vector2(231, 135)
@@ -47,7 +50,7 @@ position = Vector2(933, 381)
 [node name="WinZone" parent="." unique_id=2070348039 instance=ExtResource("3_cacf4")]
 position = Vector2(1082, 413)
 
-[node name="Killzone" parent="." unique_id=1798966041 groups=["jugador"] instance=ExtResource("4_kccwn")]
+[node name="Killzone" parent="." unique_id=1798966041 instance=ExtResource("4_kccwn")]
 position = Vector2(515, 35)
 
 [node name="PisoLargo" parent="." unique_id=1902574791 instance=ExtResource("5_nv6pj")]
