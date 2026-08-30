@@ -25,8 +25,15 @@ func _execute_collection_sequence() -> void:
 	action.call()
 
 func _apply_heal_and_destroy() -> void:
-	world.restore_life()
-	queue_free()
+	var was_healed: bool = world.restore_life()
+	
+	var destruction_map: Dictionary = {
+		true: queue_free,
+		false: _ignore_action
+	}
+	
+	var action: Callable = destruction_map[was_healed]
+	action.call()
 
 func _ignore_action() -> void:
 	pass

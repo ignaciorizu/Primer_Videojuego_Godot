@@ -23,10 +23,24 @@ func get_respawn_position() -> Vector2:
 		
 	return current_checkpoint_position
 
-func restore_life() -> void:
-	if current_lives < MAX_LIVES:
-		current_lives += 1
-		lives_changed.emit(current_lives)
+func restore_life() -> bool:
+	var can_heal: bool = current_lives < MAX_LIVES
+	
+	var heal_action_map: Dictionary = {
+		true: _add_life,
+		false: _reject_heal
+	}
+	
+	var action: Callable = heal_action_map[can_heal]
+	return action.call()
+
+func _add_life() -> bool:
+	current_lives += 1
+	lives_changed.emit(current_lives)
+	return true
+
+func _reject_heal() -> bool:
+	return false
 	
 func subtract_life() -> void:
 	current_lives -= 1
