@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://httovaliqqan"]
 
-[ext_resource type="Texture2D" uid="uid://cb2djvtfmuod3" path="res://icon.svg" id="1_0gkd8"]
 [ext_resource type="Script" uid="uid://dpno213kdbbfq" path="res://src/scenes/player/personaje.gd" id="1_ylnn3"]
+[ext_resource type="Texture2D" uid="uid://cyrvldnd7ryiq" path="res://src/assets/gatoCaminando.png" id="2_klvi3"]
 [ext_resource type="Script" uid="uid://cqwl8lacjep1v" path="res://src/scenes/player/camera_2d.gd" id="3_klvi3"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_if6j7"]
@@ -15,7 +15,11 @@ use_parent_material = true
 script = ExtResource("1_ylnn3")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1141354142]
-texture = ExtResource("1_0gkd8")
+position = Vector2(-0.5, 0.5)
+scale = Vector2(2.234375, 2.234375)
+texture = ExtResource("2_klvi3")
+hframes = 2
+vframes = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=778465331 groups=["jugador"]]
 shape = SubResource("RectangleShape2D_lj2ea")
