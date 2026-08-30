@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://httovaliqqan"]
 
 [ext_resource type="Script" uid="uid://dpno213kdbbfq" path="res://src/scenes/player/personaje.gd" id="1_ylnn3"]
+[ext_resource type="Texture2D" uid="uid://cmqp56hewruu0" path="res://src/assets/gatoSalto.png" id="2_klvi3"]
 [ext_resource type="Script" uid="uid://cqwl8lacjep1v" path="res://src/scenes/player/camera_2d.gd" id="3_klvi3"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_if6j7"]
@@ -61,6 +62,12 @@ texture = SubResource("CompressedTexture2D_ylnn3")
 hframes = 2
 vframes = 2
 frame = 2
+
+[node name="JumpSprite" type="Sprite2D" parent="." unique_id=894013705]
+visible = false
+position = Vector2(1.4999976, -9.5)
+scale = Vector2(2.109375, 2.2031252)
+texture = ExtResource("2_klvi3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=778465331 groups=["jugador"]]
 position = Vector2(3, -9)

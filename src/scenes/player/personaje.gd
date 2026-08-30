@@ -5,6 +5,7 @@ const JUMP_VELOCITY: float = -500.0
 
 @onready var _animation_player: AnimationPlayer = $AnimationPlayer
 @onready var _sprite: Sprite2D = $Sprite2D
+@onready var _jump_sprite: Sprite2D = $JumpSprite
 
 func _ready() -> void:
 	_initialize_spawn_position()
@@ -15,6 +16,7 @@ func _physics_process(delta: float) -> void:
 	
 	var direction: float = Input.get_axis("ui_left", "ui_right")
 	_apply_movement(direction)
+		
 	_update_visual_state(direction)
 	
 	move_and_slide()
@@ -40,7 +42,24 @@ func _apply_movement(direction: float) -> void:
 
 func _update_visual_state(direction: float) -> void:
 	if direction != 0.0:
-		_sprite.flip_h = direction > 0.0
-		_animation_player.play("walk")
+		_direction_sprite(direction)
+		if is_on_floor():
+			_sprite_idle()
+			_animation_player.play("walk")
+		else:
+			_sprite_jump()
 	else:
+		_sprite_idle()
 		_animation_player.stop()
+
+func _sprite_idle() -> void:
+	_sprite.visible = 1
+	_jump_sprite.visible = 0
+	
+func _sprite_jump() -> void:
+	_sprite.visible = 0
+	_jump_sprite.visible = 1
+
+func _direction_sprite(direction: float) -> void:
+	_sprite.flip_h = direction > 0.0
+	_jump_sprite.flip_h = direction < 0.0 
