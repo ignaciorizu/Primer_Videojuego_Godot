@@ -5,6 +5,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_if6j7"]
 
 [node name="Killzone" type="Area2D" unique_id=1798966041 groups=["jugador"]]
+collision_layer = 4
 script = ExtResource("1_p3w3i")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=594776966]

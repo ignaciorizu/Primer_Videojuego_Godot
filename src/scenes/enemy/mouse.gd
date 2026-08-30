@@ -1,18 +1,18 @@
 extends CharacterBody2D
 
 const PATROL_SPEED: float = 100.0
-const DIRECTION_RIGHT: float = 1.0
 const DIRECTION_LEFT: float = -1.0
 
 @onready var _sprite: Sprite2D = $Sprite2D
 @onready var _sensor_pivot: Marker2D = $SensorPivot
 @onready var _wall_sensor: RayCast2D = $SensorPivot/WallSensor
 @onready var _floor_sensor: RayCast2D = $SensorPivot/FloorSensor
+@onready var _hitbox: Area2D = $Hitbox
 
 var _current_direction: float = DIRECTION_LEFT
 
 func _ready() -> void:
-	pass
+	_hitbox.body_entered.connect(_process_hitbox_collision)
 
 func _physics_process(delta: float) -> void:
 	_apply_gravity(delta)
@@ -20,7 +20,6 @@ func _physics_process(delta: float) -> void:
 	_apply_movement()
 	
 	move_and_slide()
-	_evaluate_kinematic_collisions()
 
 func _apply_gravity(delta: float) -> void:
 	if not is_on_floor():
@@ -50,14 +49,8 @@ func _ignore_action() -> void:
 func _apply_movement() -> void:
 	velocity.x = _current_direction * PATROL_SPEED
 
-func _evaluate_kinematic_collisions() -> void:
-	for index in range(get_slide_collision_count()):
-		var collision: KinematicCollision2D = get_slide_collision(index)
-		var collider: Object = collision.get_collider()
-		_process_collider(collider)
-
-func _process_collider(collider: Object) -> void:
-	var is_valid_player: bool = collider != null and collider.is_in_group("jugador")
+func _process_hitbox_collision(body: Node2D) -> void:
+	var is_valid_player: bool = body != null and body.is_in_group("jugador")
 	
 	var collision_action_map: Dictionary = {
 		true: _execute_damage_sequence,
@@ -65,7 +58,7 @@ func _process_collider(collider: Object) -> void:
 	}
 	
 	var action: Callable = collision_action_map[is_valid_player]
-	action.call()
+	action.call_deferred()
 
 func _execute_damage_sequence() -> void:
 	world.subtract_life()

@@ -55,6 +55,7 @@ _data = {
 [node name="Personaje" type="CharacterBody2D" unique_id=664453637 groups=["jugador"]]
 material = SubResource("CanvasItemMaterial_if6j7")
 use_parent_material = true
+collision_layer = 2
 script = ExtResource("1_ylnn3")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1141354142]
@@ -72,7 +73,7 @@ scale = Vector2(2.109375, 2.2031252)
 texture = SubResource("CompressedTexture2D_klvi3")
 flip_h = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=778465331 groups=["jugador"]]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=778465331]
 position = Vector2(3, -9)
 shape = SubResource("RectangleShape2D_lj2ea")
 
