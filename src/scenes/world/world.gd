@@ -1,18 +1,19 @@
 extends Node
 
-var current_checkpoint_position: Vector2 = Vector2.ZERO
 const MAX_LIVES: int = 3
+
+var current_checkpoint_position: Vector2 = Vector2.ZERO
 var current_lives: int = MAX_LIVES
+var collected_items_registry: Dictionary = {}
 
 signal lives_changed(new_lives_count: int)
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	pass
 
 func update_checkpoint_position(new_position: Vector2) -> void:
 	if new_position == Vector2.ZERO:
-		push_error("Error de validación: Intento de guardar un checkpoint nulo.")
+		push_error("Error de validacion: Intento de guardar un checkpoint nulo.")
 		return
 		
 	current_checkpoint_position = new_position
@@ -41,7 +42,7 @@ func _add_life() -> bool:
 
 func _reject_heal() -> bool:
 	return false
-	
+
 func subtract_life() -> void:
 	current_lives -= 1
 	lives_changed.emit(current_lives)
@@ -49,6 +50,13 @@ func subtract_life() -> void:
 	if current_lives <= 0:
 		_reset_game_state()
 
+func register_collected_item(item_id: String) -> void:
+	collected_items_registry[item_id] = true
+
+func is_item_collected(item_id: String) -> bool:
+	return collected_items_registry.has(item_id)
+
 func _reset_game_state() -> void:
 	current_lives = MAX_LIVES
 	current_checkpoint_position = Vector2.ZERO
+	collected_items_registry.clear()
