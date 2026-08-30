@@ -15,10 +15,10 @@ hframes = 2
 position = Vector2(6.5, 13)
 shape = SubResource("RectangleShape2D_157bq")
 
-[node name="Marker2D" type="Marker2D" parent="." unique_id=869343081]
+[node name="SensorPivot" type="Marker2D" parent="." unique_id=869343081]
 
-[node name="WallSensor" type="RayCast2D" parent="Marker2D" unique_id=1326180462]
+[node name="WallSensor" type="RayCast2D" parent="SensorPivot" unique_id=1326180462]
 target_position = Vector2(-72, 0)
 
-[node name="FloorSensor" type="RayCast2D" parent="Marker2D" unique_id=256901092]
+[node name="FloorSensor" type="RayCast2D" parent="SensorPivot" unique_id=256901092]
 target_position = Vector2(-66, 44)
