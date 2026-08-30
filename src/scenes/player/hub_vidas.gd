@@ -1,5 +1,10 @@
 extends CanvasLayer
 
+const OPACITY_MAP: Dictionary = {
+	true: 1.0,
+	false: 0.3
+}
+
 @onready var _life_icons: Array = [
 	$HBoxContainer/TextureRect,
 	$HBoxContainer/TextureRect2,
@@ -16,4 +21,4 @@ func update_lives_display(current_lives: int) -> void:
 		return
 
 	for index in range(_life_icons.size()):
-		_life_icons[index].visible = index < current_lives
+		_life_icons[index].modulate.a = OPACITY_MAP[index < current_lives]
