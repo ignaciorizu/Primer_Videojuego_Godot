@@ -2,7 +2,9 @@
 
 [ext_resource type="Script" uid="uid://cvbhn1ltc6xyg" path="res://src/scenes/world/world.gd" id="1_m1gqc"]
 [ext_resource type="PackedScene" uid="uid://httovaliqqan" path="res://src/scenes/player/Personaje.tscn" id="1_m76yy"]
+[ext_resource type="Texture2D" uid="uid://cufjm3rxnoe6u" path="res://src/assets/fondo.png" id="2_ma7xk"]
 [ext_resource type="PackedScene" uid="uid://cwxq2l7pheehq" path="res://src/scenes/pisos/piso.tscn" id="2_q3of6"]
+[ext_resource type="PackedScene" uid="uid://ca4bv1mgfmpt5" path="res://src/scenes/pisos/pisoMedio.tscn" id="3_br3r2"]
 [ext_resource type="PackedScene" uid="uid://bexba03ye7lue" path="res://src/scenes/winZone/winZone.tscn" id="3_cacf4"]
 [ext_resource type="PackedScene" uid="uid://db72vg4vlmqqe" path="res://src/scenes/kill_Zone/kill_zone.tscn" id="4_kccwn"]
 [ext_resource type="PackedScene" uid="uid://bb72ejoj72opb" path="res://src/scenes/pisos/pisoLargo.tscn" id="5_nv6pj"]
@@ -13,55 +15,65 @@
 [ext_resource type="Script" uid="uid://chb5qiqorhk2q" path="res://src/scenes/enemy/mouse.gd" id="11_4fx67"]
 [ext_resource type="PackedScene" uid="uid://n1og1xdw2xuc" path="res://src/scenes/enemy/mouseVariante.tscn" id="12_qfn71"]
 [ext_resource type="PackedScene" uid="uid://m5ds405y026o" path="res://src/scenes/objects/vida.tscn" id="13_qqcoc"]
+[ext_resource type="PackedScene" uid="uid://oqax4vhqc67o" path="res://src/scenes/pisos/estantes.tscn" id="16_br3r2"]
+[ext_resource type="PackedScene" uid="uid://degcst2tsw2fe" path="res://src/scenes/pisos/pisoAlto.tscn" id="17_tthay"]
 
 [node name="World" type="Node2D" unique_id=869871594]
 script = ExtResource("1_m1gqc")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=983555015]
-offset_top = -1.0
-offset_right = 2655.0
-offset_bottom = 690.0
+[node name="fondo" type="Sprite2D" parent="." unique_id=1021869479]
+position = Vector2(1060, -48)
+texture = ExtResource("2_ma7xk")
 
 [node name="Vidas" parent="." unique_id=2103879004 instance=ExtResource("9_iwh12")]
 
 [node name="Personaje" parent="." unique_id=664453637 instance=ExtResource("1_m76yy")]
-position = Vector2(154, 34)
+position = Vector2(2016, 552)
 
-[node name="Piso" parent="." unique_id=1415212472 instance=ExtResource("2_q3of6")]
-position = Vector2(231, 135)
+[node name="Piso" parent="." unique_id=511355007 instance=ExtResource("2_q3of6")]
+position = Vector2(280, 544)
+
+[node name="PisoMedio" parent="." unique_id=1415212472 instance=ExtResource("3_br3r2")]
+position = Vector2(276, 393)
+
+[node name="PisoMedio3" parent="." unique_id=1236223299 instance=ExtResource("3_br3r2")]
+position = Vector2(90, 488)
+
+[node name="PisoMedio2" parent="." unique_id=1661969859 instance=ExtResource("3_br3r2")]
+position = Vector2(378, 496)
 
 [node name="Piso2" parent="." unique_id=1035774501 instance=ExtResource("2_q3of6")]
-position = Vector2(379, 226)
+position = Vector2(188, 543)
 
 [node name="Piso3" parent="." unique_id=2040790120 instance=ExtResource("2_q3of6")]
-position = Vector2(818, 503)
+position = Vector2(186, 328)
 
 [node name="Piso4" parent="." unique_id=1616563267 instance=ExtResource("2_q3of6")]
-position = Vector2(556, 329)
+position = Vector2(1704, 552)
 
 [node name="Piso5" parent="." unique_id=334602044 instance=ExtResource("2_q3of6")]
-position = Vector2(1409, 481)
+position = Vector2(1296, 552)
 
 [node name="Piso6" parent="." unique_id=800230437 instance=ExtResource("2_q3of6")]
-position = Vector2(1894, 425)
+position = Vector2(98, 328)
 
 [node name="Piso7" parent="." unique_id=665216934 instance=ExtResource("2_q3of6")]
-position = Vector2(765, 196)
-
-[node name="Piso8" parent="." unique_id=165363320 instance=ExtResource("2_q3of6")]
-position = Vector2(933, 381)
+position = Vector2(186, 440)
 
 [node name="WinZone" parent="." unique_id=2070348039 instance=ExtResource("3_cacf4")]
-position = Vector2(1082, 413)
+position = Vector2(846, -708)
 
 [node name="Killzone" parent="." unique_id=1798966041 instance=ExtResource("4_kccwn")]
-position = Vector2(515, 35)
+position = Vector2(2288, -144)
 
 [node name="PisoLargo" parent="." unique_id=1902574791 instance=ExtResource("5_nv6pj")]
-position = Vector2(565, 615)
+position = Vector2(824, 543)
 
-[node name="PisoLargo" parent="PisoLargo" unique_id=424267452 instance=ExtResource("5_nv6pj")]
-position = Vector2(-344, -30)
+[node name="PisoLargo2" parent="." unique_id=424267452 instance=ExtResource("5_nv6pj")]
+position = Vector2(1960, 136)
+
+[node name="PisoLargo3" parent="." unique_id=1481292446 instance=ExtResource("5_nv6pj")]
+position = Vector2(1970, -56)
 
 [node name="LimiteEscenario" parent="." unique_id=485679348 instance=ExtResource("6_iaymg")]
 position = Vector2(0, 350)
@@ -72,26 +84,37 @@ position = Vector2(2124, 351.00003)
 scale = Vector2(0.5, 30)
 
 [node name="LimiteEscenario3" parent="." unique_id=298415314 instance=ExtResource("6_iaymg")]
-position = Vector2(1284, -105)
+position = Vector2(1264, -888)
 scale = Vector2(100, 0.5)
 
 [node name="LimiteEscenario4" parent="." unique_id=219839081 instance=ExtResource("6_iaymg")]
-position = Vector2(1174, 706)
+position = Vector2(1178, 600)
 scale = Vector2(100, 0.5)
 
+[node name="LimiteEscenario5" parent="." unique_id=1047030913 instance=ExtResource("6_iaymg")]
+position = Vector2(1232, 208)
+scale = Vector2(36.42198, -0.6958347)
+
 [node name="CheckPoint" parent="." unique_id=1597545599 instance=ExtResource("8_gd3mq")]
-position = Vector2(571, 281)
+position = Vector2(608, 144)
 
 [node name="Mouse" parent="." unique_id=140231355 instance=ExtResource("10_hrb3u")]
-position = Vector2(557, 562)
+position = Vector2(1344, 152)
 script = ExtResource("11_4fx67")
 
 [node name="Mouse2" parent="." unique_id=1903183908 instance=ExtResource("10_hrb3u")]
-position = Vector2(282, 516)
+position = Vector2(944, -152)
 script = ExtResource("11_4fx67")
 
 [node name="Mouse3" parent="." unique_id=296037076 instance=ExtResource("12_qfn71")]
-position = Vector2(140, 542)
+position = Vector2(1136, -296)
 
 [node name="Vida" parent="." unique_id=978598607 instance=ExtResource("13_qqcoc")]
-position = Vector2(953, 312)
+position = Vector2(1872, -56)
+
+[node name="Estantes" parent="." unique_id=499145231 instance=ExtResource("16_br3r2")]
+position = Vector2(1089, -330)
+collision_mask = 6
+
+[node name="PisoAlto" parent="." unique_id=1667933756 instance=ExtResource("17_tthay")]
+position = Vector2(24, 453)

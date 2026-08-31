@@ -1,21 +1,21 @@
 [gd_scene format=3 uid="uid://bexba03ye7lue"]
 
 [ext_resource type="Script" uid="uid://dl5twyonpctkn" path="res://src/scenes/winZone/win_zone.gd" id="1_ghq1c"]
+[ext_resource type="Texture2D" uid="uid://dls1l85l0gn6g" path="res://src/assets/caja.png" id="2_5jenr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_if6j7"]
+size = Vector2(92, 90)
 
 [node name="WinZone" type="Area2D" unique_id=2070348039]
 collision_mask = 2
 script = ExtResource("1_ghq1c")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1588410738]
-offset_left = -10.0
-offset_top = -10.0
-offset_right = 10.0
-offset_bottom = 10.0
-color = Color(0.638804, 0.17798674, 0.5694391, 1)
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2013016234]
+position = Vector2(0, -4)
 shape = SubResource("RectangleShape2D_if6j7")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=584228894]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_5jenr")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

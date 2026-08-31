@@ -4,10 +4,16 @@
 
 [node name="PisoLargo" type="Node2D" unique_id=1902574791]
 
-[node name="Piso" parent="." unique_id=1415212472 instance=ExtResource("1_5m5ex")]
-
 [node name="Piso2" parent="." unique_id=245078698 instance=ExtResource("1_5m5ex")]
-position = Vector2(76, 0)
+position = Vector2(120, 0)
+
+[node name="Piso4" parent="." unique_id=1415212472 instance=ExtResource("1_5m5ex")]
+position = Vector2(60, 0)
+
+[node name="Piso5" parent="." unique_id=1359374306 instance=ExtResource("1_5m5ex")]
+position = Vector2(-120, 0)
+
+[node name="Piso" parent="." unique_id=2117238678 instance=ExtResource("1_5m5ex")]
 
 [node name="Piso3" parent="." unique_id=356330275 instance=ExtResource("1_5m5ex")]
-position = Vector2(-76, 0)
+position = Vector2(-60, 0)

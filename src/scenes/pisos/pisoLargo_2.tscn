@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://ctr0ta3jrd4as"]
+
+[ext_resource type="PackedScene" uid="uid://cyffsk8esx606" path="res://src/scenes/pisos/piso_2.tscn" id="1_iij3h"]
+
+[node name="PisoLargo_2" type="Node2D" unique_id=603957484]
+
+[node name="Piso" parent="." unique_id=1415212472 instance=ExtResource("1_iij3h")]
+
+[node name="Piso3" parent="." unique_id=1073762005 instance=ExtResource("1_iij3h")]
+position = Vector2(-110, 0)
+
+[node name="Piso2" parent="." unique_id=711921017 instance=ExtResource("1_iij3h")]
+position = Vector2(-55, 0)
+
+[node name="Piso4" parent="." unique_id=76363018 instance=ExtResource("1_iij3h")]
+position = Vector2(110, 0)
+
+[node name="Piso5" parent="." unique_id=893680294 instance=ExtResource("1_iij3h")]
+position = Vector2(55, 0)

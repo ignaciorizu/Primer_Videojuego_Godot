@@ -30,9 +30,7 @@ jugador=""
 
 [layer_names]
 
-2d_physics/layer_1="Entorno"
-2d_physics/layer_2="Jugador"
-2d_physics/layer_3="Enemigos"
+2d_physics/canvas_textures/default_texture_filter=1
 
 [physics]
 

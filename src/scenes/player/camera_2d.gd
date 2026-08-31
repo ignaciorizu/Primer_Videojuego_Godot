@@ -1,9 +1,9 @@
 extends Camera2D
 
-const BOUNDARY_LEFT: int = -1000
-const BOUNDARY_RIGHT: int = 1920
-const BOUNDARY_TOP: int = -1080
-const BOUNDARY_BOTTOM: int = 1000
+const BOUNDARY_LEFT: int = 36
+const BOUNDARY_RIGHT: int = 2085
+const BOUNDARY_TOP: int = -900
+const BOUNDARY_BOTTOM: int = 650
 
 func _ready() -> void:
 	validate_boundaries()

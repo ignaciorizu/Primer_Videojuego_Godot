@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://degcst2tsw2fe"]
+
+[ext_resource type="Texture2D" uid="uid://dnf5d3k6dmqun" path="res://src/assets/libros 4.png" id="1_bkep6"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_oy0ov"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bl3lh"]
+size = Vector2(64, 192)
+
+[node name="PisoAlto" type="StaticBody2D" unique_id=1415212472]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1265009604]
+position = Vector2(6, -1)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("1_bkep6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1192282940]
+material = SubResource("CanvasItemMaterial_oy0ov")
+scale = Vector2(1.5, 1.5)
+shape = SubResource("RectangleShape2D_bl3lh")
