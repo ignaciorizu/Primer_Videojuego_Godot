@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://ltv8h6me5aev"]
+
+[ext_resource type="Texture2D" uid="uid://b750pcjqehqn7" path="res://src/assets/BotonReinicio.png" id="1_0k43i"]
+[ext_resource type="Script" uid="uid://b1jddi4vhurie" path="res://src/scenes/world/reset_button.gd" id="1_0yqsl"]
+
+[sub_resource type="Shortcut" id="Shortcut_if6j7"]
+resource_name = "ui_accept"
+
+[node name="RestartButtonContainer" type="CenterContainer" unique_id=277019339]
+offset_left = -533.0
+offset_top = -497.0
+offset_right = 499.0
+offset_bottom = 535.0
+script = ExtResource("1_0yqsl")
+
+[node name="BaseButton" type="Button" parent="." unique_id=2003681638]
+layout_mode = 2
+shortcut = SubResource("Shortcut_if6j7")
+icon = ExtResource("1_0k43i")
