@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://lqa0pa5d1xea"]
+
+[ext_resource type="Texture2D" uid="uid://cuxk1rqhf0t76" path="res://src/assets/pensamiento.png" id="1_iblvi"]
+[ext_resource type="Texture2D" uid="uid://ctiwhrxhe5ymx" path="res://src/assets/cama.png" id="2_ckh2v"]
+[ext_resource type="Texture2D" uid="uid://cewj0wq7d7a5p" path="res://src/assets/gatoDurmiendo.png" id="3_v6ed3"]
+
+[node name="Objetivo" type="Node2D" unique_id=825440762]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1824462558]
+position = Vector2(3.8146973e-06, 3.8146973e-06)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_iblvi")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=829672780]
+position = Vector2(0, -8)
+scale = Vector2(0.5625, 0.5625)
+texture = ExtResource("2_ckh2v")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=976412253]
+position = Vector2(-4.7683716e-07, -7.9999995)
+scale = Vector2(0.1953125, 0.1953125)
+texture = ExtResource("3_v6ed3")

@@ -12,8 +12,8 @@ const OPACITY_MAP: Dictionary = {
 ]
 
 func _ready() -> void:
-	world.lives_changed.connect(update_lives_display)
-	update_lives_display(world.current_lives)
+	GameState.lives_changed.connect(update_lives_display)
+	update_lives_display(GameState.get_current_lives())
 
 func update_lives_display(current_lives: int) -> void:
 	if current_lives < 0 or current_lives > _life_icons.size():

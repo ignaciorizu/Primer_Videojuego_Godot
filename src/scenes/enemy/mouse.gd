@@ -71,7 +71,7 @@ func _execute_damage_sequence() -> void:
 	action.call()
 
 func _apply_damage_and_reload() -> void:
-	world.subtract_life()
+	GameState.subtract_life()
 	get_tree().reload_current_scene()
 
 func _ignore_action() -> void:

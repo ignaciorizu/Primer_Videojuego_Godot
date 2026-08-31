@@ -9,5 +9,5 @@ func _on_body_entered(body: Node2D) -> void:
 		call_deferred("_process_player_damage")
 
 func _process_player_damage() -> void:
-	world.subtract_life()
+	GameState.subtract_life()
 	get_tree().reload_current_scene()

@@ -7,7 +7,7 @@ func _ready() -> void:
 	body_entered.connect(_process_collection)
 
 func _validate_initial_state() -> void:
-	var is_already_collected: bool = world.is_item_collected(unique_item_id)
+	var is_already_collected: bool = GameState.is_item_collected(unique_item_id)
 	
 	var state_action_map: Dictionary = {
 		true: queue_free,
@@ -39,18 +39,18 @@ func _execute_collection_sequence() -> void:
 	action.call()
 
 func _apply_heal_and_register() -> void:
-	var was_healed: bool = world.restore_life()
-	
+	var was_healed: bool = GameState.restore_life()
+
 	var registration_map: Dictionary = {
 		true: _finalize_collection,
 		false: _ignore_action
 	}
-	
+
 	var action: Callable = registration_map[was_healed]
 	action.call()
 
 func _finalize_collection() -> void:
-	world.register_collected_item(unique_item_id)
+	GameState.register_collected_item(unique_item_id)
 	queue_free()
 
 func _ignore_action() -> void:

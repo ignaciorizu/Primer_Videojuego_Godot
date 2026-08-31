@@ -65,24 +65,6 @@ rotation = 0.5235988
 shape = SubResource("RectangleShape2D_pdx7w")
 one_way_collision = true
 
-[node name="Mouse" parent="." unique_id=140231355 instance=ExtResource("10_hrb3u")]
-position = Vector2(1208, -72)
-script = ExtResource("11_4fx67")
-
-[node name="Mouse2" parent="." unique_id=1903183908 instance=ExtResource("10_hrb3u")]
-position = Vector2(776, -360)
-script = ExtResource("11_4fx67")
-
-[node name="Mouse5" parent="." unique_id=1470049814 instance=ExtResource("10_hrb3u")]
-position = Vector2(1280, -600)
-script = ExtResource("11_4fx67")
-
-[node name="Mouse3" parent="." unique_id=296037076 instance=ExtResource("12_qfn71")]
-position = Vector2(1368, -320)
-
-[node name="Mouse4" parent="." unique_id=1101187931 instance=ExtResource("12_qfn71")]
-position = Vector2(840, -584)
-
 [node name="poste de gato" type="Sprite2D" parent="." unique_id=233445721]
 position = Vector2(1880, -296)
 scale = Vector2(0.71052635, 0.71052635)
@@ -230,8 +212,27 @@ position = Vector2(328, -64)
 [node name="CheckPoint2" parent="." unique_id=976886731 instance=ExtResource("8_gd3mq")]
 position = Vector2(512, -472)
 
+[node name="Mouse" parent="." unique_id=140231355 instance=ExtResource("10_hrb3u")]
+position = Vector2(1208, -72)
+script = ExtResource("11_4fx67")
+
+[node name="Mouse2" parent="." unique_id=1903183908 instance=ExtResource("10_hrb3u")]
+position = Vector2(776, -360)
+script = ExtResource("11_4fx67")
+
+[node name="Mouse5" parent="." unique_id=1470049814 instance=ExtResource("10_hrb3u")]
+position = Vector2(1280, -600)
+script = ExtResource("11_4fx67")
+
+[node name="Mouse3" parent="." unique_id=296037076 instance=ExtResource("12_qfn71")]
+position = Vector2(1368, -320)
+
+[node name="Mouse4" parent="." unique_id=1101187931 instance=ExtResource("12_qfn71")]
+position = Vector2(840, -584)
+
 [node name="Vida" parent="." unique_id=978598607 instance=ExtResource("13_qqcoc")]
 position = Vector2(1760, -96)
+unique_item_id = null
 
 [node name="PisoAlto" parent="." unique_id=1667933756 instance=ExtResource("17_tthay")]
 position = Vector2(24, 453)

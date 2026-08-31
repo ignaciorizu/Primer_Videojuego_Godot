@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dpno213kdbbfq" path="res://src/scenes/player/personaje.gd" id="1_ylnn3"]
 [ext_resource type="Texture2D" uid="uid://duxrbaelepcwv" path="res://src/assets/gatoSaltando.png" id="2_klvi3"]
 [ext_resource type="Script" uid="uid://cqwl8lacjep1v" path="res://src/scenes/player/camera_2d.gd" id="3_klvi3"]
+[ext_resource type="PackedScene" uid="uid://lqa0pa5d1xea" path="res://src/scenes/player/objetivo.tscn" id="4_d7hjr"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_if6j7"]
 
@@ -81,3 +82,6 @@ script = ExtResource("3_klvi3")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1912019542]
 libraries/ = SubResource("AnimationLibrary_d7hjr")
+
+[node name="Objetivo" parent="." unique_id=787915130 instance=ExtResource("4_d7hjr")]
+position = Vector2(-105, -95)
