@@ -3,10 +3,10 @@
 [ext_resource type="Texture2D" uid="uid://cbhw5as1mtpm4" path="res://src/assets/mouse 1.png" id="1_mh7qk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_157bq"]
-size = Vector2(99, 44)
+size = Vector2(62, 44)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_if6j7"]
-size = Vector2(106, 60)
+size = Vector2(75, 52)
 
 [sub_resource type="Animation" id="Animation_mh7qk"]
 length = 0.001
@@ -55,7 +55,7 @@ hframes = 2
 frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=779561835]
-position = Vector2(6.5, 13)
+position = Vector2(-8, 13)
 shape = SubResource("RectangleShape2D_157bq")
 
 [node name="SensorPivot" type="Marker2D" parent="." unique_id=869343081]
@@ -71,7 +71,7 @@ collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=906286544]
-position = Vector2(4, 9)
+position = Vector2(-7.5, 13)
 shape = SubResource("RectangleShape2D_if6j7")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1375459981]

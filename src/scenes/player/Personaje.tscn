@@ -54,6 +54,7 @@ _data = {
 material = SubResource("CanvasItemMaterial_if6j7")
 use_parent_material = true
 collision_layer = 2
+collision_mask = 9
 script = ExtResource("1_ylnn3")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1141354142]

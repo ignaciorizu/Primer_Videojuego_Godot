@@ -2,7 +2,7 @@ extends Camera2D
 
 const BOUNDARY_LEFT: int = 36
 const BOUNDARY_RIGHT: int = 2085
-const BOUNDARY_TOP: int = -900
+const BOUNDARY_TOP: int = -1150
 const BOUNDARY_BOTTOM: int = 650
 
 func _ready() -> void:

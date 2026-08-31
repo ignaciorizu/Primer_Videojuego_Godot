@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bexba03ye7lue"]
 
 [ext_resource type="Script" uid="uid://dl5twyonpctkn" path="res://src/scenes/winZone/win_zone.gd" id="1_ghq1c"]
-[ext_resource type="Texture2D" uid="uid://dls1l85l0gn6g" path="res://src/assets/caja.png" id="2_5jenr"]
+[ext_resource type="Texture2D" uid="uid://ctiwhrxhe5ymx" path="res://src/assets/cama.png" id="2_5jenr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_if6j7"]
 size = Vector2(92, 90)
@@ -15,7 +15,9 @@ position = Vector2(0, -4)
 shape = SubResource("RectangleShape2D_if6j7")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=584228894]
-scale = Vector2(0.5, 0.5)
+position = Vector2(5.4820023, -6.750002)
+scale = Vector2(1.5, 1.5)
 texture = ExtResource("2_5jenr")
+flip_h = true
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
