@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://sv23iscjnm3c"]
 
 [ext_resource type="Texture2D" uid="uid://by34b3q5ju0e0" path="res://src/assets/win.png" id="1_taosu"]
+[ext_resource type="PackedScene" uid="uid://ltv8h6me5aev" path="res://src/scenes/world/resetButton.tscn" id="2_4xfgh"]
 
 [sub_resource type="FontVariation" id="FontVariation_pdx7w"]
 
@@ -10,10 +11,6 @@ font_size = 50
 font_color = Color(0.78910834, 0.51927125, 0.15005594, 1)
 
 [node name="Win" type="Node2D" unique_id=1245885283]
-
-[node name="ColorRect" type="ColorRect" parent="." unique_id=676348975]
-offset_right = 1195.0
-offset_bottom = 653.0
 
 [node name="Label" type="Label" parent="." unique_id=1078962790]
 offset_left = 325.0
@@ -28,3 +25,10 @@ vertical_alignment = 1
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1834739617]
 position = Vector2(1013, 942)
 texture = ExtResource("1_taosu")
+
+[node name="RestartButtonContainer" parent="." unique_id=277019339 instance=ExtResource("2_4xfgh")]
+offset_left = 460.0
+offset_top = 95.0
+offset_right = 1492.0
+offset_bottom = 1127.0
+scale = Vector2(0.24325067, 0.23763698)
