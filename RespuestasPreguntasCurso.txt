@@ -1,0 +1,5 @@
+¿Por qué el motor se llama GODOT?
+El nombre "Godot" hace referencia a la famosa obra de teatro "Esperando a Godot" (Waiting for Godot) del dramaturgo Samuel Beckett. Los creadores originales del motor (Juan Linietsky y Ariel Manzur) eligieron este nombre porque sentían que agregarle características al motor era una tarea interminable; siempre estaban esperando que el motor estuviera "terminado", al igual que los personajes de la obra esperan a un Godot que nunca llega.
+
+¿Por qué se le llama Sprite a las imágenes en videojuegos y de dónde viene la palabra?
+La palabra "Sprite" proviene del latín "spiritus" y se utiliza en la mitología para describir a espíritus, duendes o hadas. En la historia de la informática, el término fue acuñado en los años 70 (popularizado por un investigador de Texas Instruments) porque estas imágenes bidimensionales se renderizaban de forma independiente y "flotaban" por encima del fondo o la cuadrícula principal de la pantalla, moviéndose libremente como si fueran pequeños espíritus o fantasmas superpuestos en la imagen.
