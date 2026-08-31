@@ -29,6 +29,10 @@ var _is_input_locked: bool = false
 func _ready() -> void:
 	_objective_bubble.visible = false
 	_initialize_spawn_position()
+	_connect_global_signals()
+
+func _connect_global_signals() -> void:
+	GameState.checkpoint_updated.connect(display_objective_temporarily)
 
 func _physics_process(delta: float) -> void:
 	_apply_gravity(delta)
@@ -82,11 +86,22 @@ func _hide_objective_bubble() -> void:
 	_objective_bubble.visible = false
 
 func _initialize_spawn_position() -> void:
-	var world_node: Node = get_parent()
-	if world_node.has_method("get_respawn_position"):
-		var respawn_pos: Vector2 = world_node.get_respawn_position()
-		if respawn_pos != Vector2.ZERO:
-			global_position = respawn_pos
+	var respawn_pos: Vector2 = GameState.get_respawn_position()
+	
+	var position_action_map: Dictionary = {
+		true: _apply_respawn_position,
+		false: _keep_initial_position
+	}
+	
+	var is_valid_position: bool = respawn_pos != Vector2.ZERO
+	var action: Callable = position_action_map[is_valid_position]
+	action.call(respawn_pos)
+
+func _apply_respawn_position(target_position: Vector2) -> void:
+	global_position = target_position
+
+func _keep_initial_position(target_position: Vector2) -> void:
+	pass
 
 func _apply_gravity(delta: float) -> void:
 	if not is_on_floor():

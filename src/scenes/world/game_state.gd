@@ -9,6 +9,7 @@ var _collected_items_registry: Dictionary = {}
 var _has_intro_played: bool = false
 
 signal lives_changed(new_lives_count: int)
+signal checkpoint_updated
 
 func is_intro_played() -> bool:
 	return _has_intro_played
@@ -21,6 +22,7 @@ func update_checkpoint_position(new_position: Vector2) -> void:
 		push_error("Error de validacion: Checkpoint nulo.")
 		return
 	_current_checkpoint_position = new_position
+	checkpoint_updated.emit()
 
 func get_respawn_position() -> Vector2:
 	return _current_checkpoint_position
@@ -66,3 +68,4 @@ func _add_life() -> bool:
 
 func _reject_heal() -> bool:
 	return false
+	

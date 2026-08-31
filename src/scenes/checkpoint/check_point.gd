@@ -1,16 +1,23 @@
 extends Area2D
 
-signal checkpoint_reached(spawn_position: Vector2)
-var _is_active: bool = false
+const GROUP_PLAYER: String = "jugador"
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	checkpoint_reached.connect(GameState.update_checkpoint_position)
+	body_entered.connect(_process_checkpoint_activation)
 
-func _on_body_entered(body: Node2D) -> void:
-	if not _is_active and body.is_in_group("jugador"):
-		activate_checkpoint()
+func _process_checkpoint_activation(body: Node2D) -> void:
+	var is_valid_player: bool = body != null and body.is_in_group(GROUP_PLAYER)
+	
+	var activation_map: Dictionary = {
+		true: _register_checkpoint,
+		false: _ignore_collision
+	}
+	
+	var action: Callable = activation_map[is_valid_player]
+	action.call()
 
-func activate_checkpoint() -> void:
-	_is_active = true
-	checkpoint_reached.emit(global_position)
+func _register_checkpoint() -> void:
+	GameState.update_checkpoint_position(global_position)
+
+func _ignore_collision() -> void:
+	pass
