@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://c5eraqj1rtfk2"]
+
+[ext_resource type="Texture2D" uid="uid://dtgwr7v7lotyx" path="res://src/assets/gameOver.png" id="1_w37s4"]
+[ext_resource type="PackedScene" uid="uid://ltv8h6me5aev" path="res://src/scenes/world/resetButton.tscn" id="2_uhxml"]
+
+[node name="GameOver" type="Node2D" unique_id=278877393]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1550272295]
+position = Vector2(572, 325)
+scale = Vector2(0.8463541, 0.8463542)
+texture = ExtResource("1_w37s4")
+
+[node name="RestartButtonContainer" parent="." unique_id=277019339 instance=ExtResource("2_uhxml")]
+offset_left = 468.0
+offset_top = 430.0
+offset_right = 1500.0
+offset_bottom = 1462.0
+scale = Vector2(0.24325067, 0.23763698)

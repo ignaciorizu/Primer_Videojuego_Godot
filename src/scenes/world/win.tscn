@@ -3,24 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://by34b3q5ju0e0" path="res://src/assets/win.png" id="1_taosu"]
 [ext_resource type="PackedScene" uid="uid://ltv8h6me5aev" path="res://src/scenes/world/resetButton.tscn" id="2_4xfgh"]
 
-[sub_resource type="FontVariation" id="FontVariation_pdx7w"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_if6j7"]
-font = SubResource("FontVariation_pdx7w")
-font_size = 50
-font_color = Color(0.78910834, 0.51927125, 0.15005594, 1)
-
 [node name="Win" type="Node2D" unique_id=1245885283]
-
-[node name="Label" type="Label" parent="." unique_id=1078962790]
-offset_left = 325.0
-offset_top = 196.0
-offset_right = 834.0
-offset_bottom = 389.0
-text = "Ganaste"
-label_settings = SubResource("LabelSettings_if6j7")
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1834739617]
 position = Vector2(1013, 942)
